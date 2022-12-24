@@ -3,8 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import { useNavigate } from 'react-router-dom';
 function Header() {
+    const navigate = useNavigate();
     return (
         <Navbar bg="light" expand="lg">
             <Container>
@@ -25,6 +26,9 @@ function Header() {
                                 Separated link
                             </NavDropdown.Item>
                         </NavDropdown>
+                        <div>
+                            <Nav.Link onClick={() => navigate("/login")} className="justify-content-end">Login</Nav.Link>
+                        </div>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
