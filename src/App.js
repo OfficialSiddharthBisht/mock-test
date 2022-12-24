@@ -1,10 +1,10 @@
 import './App.css';
-import Header from './Components/Navbar';
+import Router from './routes';
+
 function App() {
   return (
     <div className="App">
-      <Header />
-      <h1>Exam E commerce application</h1>
+      <Router />
     </div>
   );
 }
